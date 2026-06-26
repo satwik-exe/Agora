@@ -46,7 +46,7 @@ describe("teaching scene validation", () => {
     const parsed = parseTeachingSceneJson(
       JSON.stringify({
         elements: [],
-        appState: { viewBackgroundColor: "#fffef8" },
+        appState: { viewBackgroundColor: "var(--surface)" },
         files: {},
       }),
     );
@@ -100,7 +100,7 @@ describe("teaching scene validation", () => {
     const parsed = parseTeachingSceneJson(
       JSON.stringify({
         elements: [],
-        appState: { collaborators: {}, viewBackgroundColor: "#fffef8" },
+        appState: { collaborators: {}, viewBackgroundColor: "var(--surface)" },
         files: {},
       }),
     );
@@ -108,15 +108,15 @@ describe("teaching scene validation", () => {
     expect(parsed.success).toBe(true);
 
     if (parsed.success) {
-      expect(parsed.scene.appState).toEqual({ viewBackgroundColor: "#fffef8" });
+      expect(parsed.scene.appState).toEqual({ viewBackgroundColor: "var(--surface)" });
     }
 
     expect(
       sanitizeTeachingScene({
         elements: [],
-        appState: { collaborators: {}, viewBackgroundColor: "#fffef8" },
+        appState: { collaborators: {}, viewBackgroundColor: "var(--surface)" },
       }).appState,
-    ).toEqual({ viewBackgroundColor: "#fffef8" });
+    ).toEqual({ viewBackgroundColor: "var(--surface)" });
   });
 
   it("strips saved viewport so boards reopen centered", () => {
@@ -127,9 +127,9 @@ describe("teaching scene validation", () => {
           scrollX: 120,
           scrollY: -40,
           zoom: { value: 0.5 },
-          viewBackgroundColor: "#fffef8",
+          viewBackgroundColor: "var(--surface)",
         },
       }).appState,
-    ).toEqual({ viewBackgroundColor: "#fffef8" });
+    ).toEqual({ viewBackgroundColor: "var(--surface)" });
   });
 });

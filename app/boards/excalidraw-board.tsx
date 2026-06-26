@@ -67,7 +67,7 @@ export default function ExcalidrawBoard({
       ({
         elements: sanitizedInitialScene.elements,
         appState: {
-          viewBackgroundColor: "#fffef8",
+          viewBackgroundColor: "var(--surface)",
           ...sanitizedInitialScene.appState,
         },
         scrollToContent: true,

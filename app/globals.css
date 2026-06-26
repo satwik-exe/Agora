@@ -10,10 +10,10 @@
   --page-max: 1440px;
 
   /* State Backgrounds */
-  --surface-hover: #f4fff7;
-  --surface-pinned: #ecfff2;
-  --surface-warning: #fff8e6;
-  --surface-error: #fff5f3;
+  --surface-hover: var(--surface-hover);
+  --surface-pinned: var(--surface-pinned);
+  --surface-warning: var(--surface-warning);
+  --surface-error: var(--surface-error);
 }
 
 [data-theme="dark"] {
@@ -375,7 +375,7 @@ img {
   width: 100%;
   padding: 13px 14px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--ink);
   font: inherit;
   font-size: 1rem;
@@ -404,7 +404,7 @@ img {
 .form-message {
   padding: 12px 14px;
   border-left: 4px solid var(--accent);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--ink);
   font-family: var(--font-main);
   font-size: 1rem;
@@ -429,7 +429,7 @@ img {
   margin-top: 28px;
   padding: 18px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .application-summary h2,
@@ -455,7 +455,7 @@ img {
   gap: 20px;
   padding: 18px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .application-row h2 {
@@ -481,7 +481,7 @@ img {
   gap: 22px;
   padding: 20px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .event-card.has-event-image {
@@ -497,7 +497,7 @@ img {
   display: block;
   width: 100%;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .event-image {
@@ -589,7 +589,7 @@ img {
   padding: 14px;
   border: 1px solid var(--line);
   border-top: 4px solid var(--accent);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--ink);
   font-weight: 800;
 }
@@ -612,7 +612,7 @@ img {
   display: grid;
   margin-top: 28px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .problem-row {
@@ -632,7 +632,7 @@ img {
 }
 
 .problem-row:hover {
-  background: #f4fff7;
+  background: var(--surface-hover);
 }
 
 .problem-row-title {
@@ -675,7 +675,7 @@ img {
   padding: 7px 10px;
   border: 1px solid var(--line);
   border-left: 3px solid var(--accent);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 800;
@@ -700,11 +700,11 @@ img {
   align-items: center;
   padding: 16px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .teaching-session-row:hover {
-  background: #f4fff7;
+  background: var(--surface-hover);
 }
 
 .teaching-session-row strong,
@@ -751,7 +751,7 @@ img {
   align-items: center;
   padding: 16px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .teaching-board-row strong,
@@ -819,7 +819,7 @@ img {
   min-height: 520px;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .excalidraw-board-shell:fullscreen .excalidraw-canvas-shell {
@@ -828,7 +828,7 @@ img {
 }
 
 .pinned-problem {
-  background: #ecfff2;
+  background: var(--surface-pinned);
 }
 
 .pinned-problem .problem-row-title {
@@ -838,18 +838,18 @@ img {
 }
 
 .problem-row.solved {
-  background: #f4fff7;
+  background: var(--surface-hover);
   border-left: 3px solid var(--accent);
 }
 
 .problem-row.solved:hover {
-  background: #ecfff2;
+  background: var(--surface-pinned);
 }
 
 .practice-leaderboard {
   margin-top: 28px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .practice-leaderboard-header,
@@ -951,7 +951,7 @@ img {
 .submission-row {
   padding: 16px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .sample-card h3 {
@@ -993,7 +993,7 @@ img {
 
 .submission-row.verdict-success {
   border-color: rgba(23, 208, 89, 0.45);
-  background: #f4fff7;
+  background: var(--surface-hover);
 }
 
 .submission-row.verdict-success .verdict-label {
@@ -1002,7 +1002,7 @@ img {
 
 .submission-row.verdict-warning {
   border-color: rgba(214, 153, 0, 0.45);
-  background: #fff8e6;
+  background: var(--surface-warning);
 }
 
 .submission-row.verdict-warning .verdict-label {
@@ -1011,7 +1011,7 @@ img {
 
 .submission-row.verdict-error {
   border-color: rgba(180, 35, 24, 0.38);
-  background: #fff5f3;
+  background: var(--surface-error);
 }
 
 .submission-row.verdict-error .verdict-label {
@@ -1052,7 +1052,7 @@ img {
 
 .running-submission {
   border-color: rgba(214, 153, 0, 0.45);
-  background: #fff8e6;
+  background: var(--surface-warning);
 }
 
 .submission-spinner {
@@ -1161,7 +1161,7 @@ img {
   resize: vertical;
   padding: 12px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--ink);
   font: inherit;
 }
@@ -1207,7 +1207,7 @@ img {
 .member-panel,
 .member-profile-side {
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .member-card,
@@ -1221,7 +1221,7 @@ img {
 }
 
 .member-card:hover {
-  background: #f4fff7;
+  background: var(--surface-hover);
 }
 
 .member-card.medal-gold {
@@ -1562,7 +1562,7 @@ img {
   padding: 0 12px;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--ink);
   font: inherit;
   font-weight: 800;
@@ -1586,7 +1586,7 @@ img {
   align-items: center;
   padding: 16px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .member-badge-admin-row strong,
@@ -1610,7 +1610,7 @@ img {
   align-items: center;
   padding: clamp(24px, 4vw, 48px);
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .badge-group-hero h1 {
@@ -1742,7 +1742,7 @@ img {
   max-height: 360px;
   overflow: auto;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .badge-member-picker label {
@@ -1760,7 +1760,7 @@ img {
 }
 
 .badge-member-picker label:hover {
-  background: #f4fff7;
+  background: var(--surface-hover);
 }
 
 .badge-member-picker input {
