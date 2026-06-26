@@ -3,9 +3,41 @@
   --ink: #171a17;
   --muted: #5b665d;
   --paper: #fbfaf3;
+  --surface: #fffef8;
   --line: #d9ded6;
   --accent-strong: #0f9f43;
   --font-main: Arial, Helvetica, sans-serif;
+
+  --surface-hover: var(--surface-hover);
+  --surface-pinned: var(--surface-pinned);
+  --surface-warning: var(--surface-warning);
+  --surface-error: var(--surface-error);
+}
+
+[data-theme="dark"] {
+  --paper: #151a23;
+  --ink: #f0f6fc;
+  --muted: #8b949e;
+  --surface: #1c212b;
+  --line: #30363d;
+
+  --accent: #21e065;
+  --accent-strong: #2ef074;
+
+  --surface-hover: #1f2e24;
+  --surface-pinned: #192b1f;
+  --surface-warning: #2b2513;
+  --surface-error: #2e1a18;
+}
+
+[data-theme="dark"] .button {
+  color: #111;
+  border-color: #111;
+  box-shadow: 5px 5px 0 #111;
+}
+
+[data-theme="dark"] .button:hover {
+  box-shadow: 4px 4px 0 #111;
 }
 
 * {
@@ -321,7 +353,7 @@ img {
   width: 100%;
   padding: 13px 14px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--ink);
   font: inherit;
   font-size: 1rem;
@@ -335,7 +367,7 @@ img {
 .form-message {
   padding: 12px 14px;
   border-left: 4px solid var(--accent);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--ink);
   font-family: var(--font-main);
   font-size: 1rem;
@@ -360,7 +392,7 @@ img {
   margin-top: 28px;
   padding: 18px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .application-summary h2,
@@ -386,7 +418,7 @@ img {
   gap: 20px;
   padding: 18px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .application-row h2 {
@@ -412,7 +444,7 @@ img {
   gap: 22px;
   padding: 20px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .event-card.has-event-image {
@@ -428,7 +460,7 @@ img {
   display: block;
   width: 100%;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .event-image {
@@ -520,7 +552,7 @@ img {
   padding: 14px;
   border: 1px solid var(--line);
   border-top: 4px solid var(--accent);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--ink);
   font-weight: 800;
 }
@@ -543,7 +575,7 @@ img {
   display: grid;
   margin-top: 28px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .problem-row {
@@ -563,7 +595,7 @@ img {
 }
 
 .problem-row:hover {
-  background: #f4fff7;
+  background: var(--surface-hover);
 }
 
 .problem-row-title {
@@ -606,7 +638,7 @@ img {
   padding: 7px 10px;
   border: 1px solid var(--line);
   border-left: 3px solid var(--accent);
-  background: #fffef8;
+  background: var(--surface);
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 800;
@@ -631,11 +663,11 @@ img {
   align-items: center;
   padding: 16px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .teaching-session-row:hover {
-  background: #f4fff7;
+  background: var(--surface-hover);
 }
 
 .teaching-session-row strong,
@@ -682,7 +714,7 @@ img {
   align-items: center;
   padding: 16px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .teaching-board-row strong,
@@ -735,11 +767,11 @@ img {
   min-height: 520px;
   overflow: hidden;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .pinned-problem {
-  background: #ecfff2;
+  background: var(--surface-pinned);
 }
 
 .pinned-problem .problem-row-title {
@@ -751,7 +783,7 @@ img {
 .practice-leaderboard {
   margin-top: 28px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .practice-leaderboard-header,
@@ -835,7 +867,7 @@ img {
 .submission-row {
   padding: 16px;
   border: 1px solid var(--line);
-  background: #fffef8;
+  background: var(--surface);
 }
 
 .sample-card h3 {
@@ -877,7 +909,7 @@ img {
 
 .submission-row.verdict-success {
   border-color: rgba(23, 208, 89, 0.45);
-  background: #f4fff7;
+  background: var(--surface-hover);
 }
 
 .submission-row.verdict-success .verdict-label {
@@ -886,7 +918,7 @@ img {
 
 .submission-row.verdict-warning {
   border-color: rgba(214, 153, 0, 0.45);
-  background: #fff8e6;
+  background: var(--surface-warning);
 }
 
 .submission-row.verdict-warning .verdict-label {
@@ -895,7 +927,7 @@ img {
 
 .submission-row.verdict-error {
   border-color: rgba(180, 35, 24, 0.38);
-  background: #fff5f3;
+  background: var(--surface-error);
 }
 
 .submission-row.verdict-error .verdict-label {
@@ -936,7 +968,7 @@ img {
 
 .running-submission {
   border-color: rgba(214, 153, 0, 0.45);
-  background: #fff8e6;
+  background: var(--surface-warning);
 }
 
 .submission-spinner {
