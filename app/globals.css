@@ -1404,7 +1404,7 @@ img {
   padding: 8px 10px;
   border-radius: 8px;
   background: var(--ink);
-  color: white;
+  color: var(--paper);
   content: attr(aria-label);
   font-size: 0.8rem;
   font-weight: 900;
